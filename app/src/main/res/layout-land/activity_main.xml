@@ -101,8 +101,6 @@
                 android:text="AC"
                 android:textSize="@dimen/buttonSizeTextLand"/>
 
-
-
         </LinearLayout>
 
         <LinearLayout
