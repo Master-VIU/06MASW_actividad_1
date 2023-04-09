@@ -2,4 +2,5 @@
 <resources>
     <dimen name="buttonSizeText">25sp</dimen>
     <dimen name="buttonSizeTextLand">15sp</dimen>
+    <dimen name="textBig">40sp</dimen>
 </resources>
