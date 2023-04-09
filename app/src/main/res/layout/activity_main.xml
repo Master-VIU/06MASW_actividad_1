@@ -47,7 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
+        android:background="#170202"
+        android:backgroundTint="#150202"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -58,36 +61,40 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/white"
                 android:text="AC"
-                android:textSize="@dimen/buttonSizeText"
-                android:background="@color/orange"/>
+                android:textSize="@dimen/buttonSizeText" />
 
-                <Button
+            <Button
                 android:id="@+id/parenthesis"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                    android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="()"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
-        <Button
-            android:id="@+id/percentage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="%"
-            android:textSize="@dimen/buttonSizeText"
-            android:background="@color/black"/>
+            <Button
+                android:id="@+id/percentage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:text="%"
+                android:textSize="@dimen/buttonSizeText" />
 
-        <Button
-            android:id="@+id/division"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/buttonSizeText"
-            android:text="/"
-            android:background="@color/black"/>
+            <Button
+                android:id="@+id/division"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:text="/"
+                android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
 
@@ -101,36 +108,40 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="7"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/eight"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="8"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/nine"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="9"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/multiply"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="X"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
 
@@ -144,36 +155,40 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="4"
-                android:background="@color/orange"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/five"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="5"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/six"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="6"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/subtract"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="_"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
 
@@ -187,36 +202,40 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="1"
-                android:background="@color/orange"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/two"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="2"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/three"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="3"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/add"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="+"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
 
@@ -230,28 +249,30 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="."
-                android:background="@color/orange"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/zero"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:text="0"
-                android:background="@color/black"/>
+                android:textSize="@dimen/buttonSizeText" />
 
             <Button
                 android:id="@+id/equal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="@dimen/buttonSizeText"
                 android:background="@color/orange"
+                android:text="="
                 android:textColor="@color/white"
-                android:text="="/>
+                android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
     </LinearLayout>
