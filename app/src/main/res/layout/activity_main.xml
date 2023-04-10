@@ -16,31 +16,18 @@
         android:layout_weight="3">
 
         <TextView
-            android:id="@+id/numbers"
-            android:layout_width="322dp"
-            android:layout_height="109dp"
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
             android:textColor="@color/white"
             android:textSize="@dimen/textBig"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.095"
+            app:layout_constraintVertical_bias="0.494"
             tools:text="5 + 5" />
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="323dp"
-            android:layout_height="100dp"
-            android:textColor="@color/white"
-            android:textSize="@dimen/textBig"
-            app:layout_constraintEnd_toEndOf="@+id/numbers"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/numbers"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="122dp"
-            tools:text="10" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -57,6 +44,16 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:text="SHARE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonSizeText" />
+
+            <Button
                 android:id="@+id/ac"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -67,27 +64,17 @@
                 android:textSize="@dimen/buttonSizeText" />
 
             <Button
-                android:id="@+id/parenthesis"
+                android:id="@+id/erase"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/black"
                 android:textColor="@color/white"
-                android:text="()"
+                android:text="C"
                 android:textSize="@dimen/buttonSizeText" />
 
             <Button
-                android:id="@+id/percentage"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
-                android:text="%"
-                android:textSize="@dimen/buttonSizeText" />
-
-            <Button
-                android:id="@+id/division"
+                android:id="@+id/divide"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -140,7 +127,7 @@
                 android:layout_weight="1"
                 android:background="@color/black"
                 android:textColor="@color/white"
-                android:text="X"
+                android:text="x"
                 android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
@@ -265,10 +252,10 @@
                 android:textSize="@dimen/buttonSizeText" />
 
             <Button
-                android:id="@+id/equal"
+                android:id="@+id/equals"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@color/orange"
                 android:text="="
                 android:textColor="@color/white"

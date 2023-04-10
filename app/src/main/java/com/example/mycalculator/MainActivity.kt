@@ -2,10 +2,192 @@ package com.example.mycalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log.d
+import android.widget.Button
+import android.widget.TextView
+import com.github.ajalt.timberkt.d
 
 class MainActivity : AppCompatActivity() {
+
+    var result: Float? = null
+    var storedNumber: Float? = null
+    var currentNumber: String = ""
+    var operation: String? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        findViewById<Button>(R.id.share).setOnClickListener {
+            d { "Share button clicked" }
+        }
+
+        findViewById<Button>(R.id.one).setOnClickListener {
+            currentNumber = currentNumber.plus("1")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.two).setOnClickListener {
+            currentNumber = currentNumber.plus("2")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.three).setOnClickListener {
+            currentNumber = currentNumber.plus("3")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.four).setOnClickListener {
+            currentNumber = currentNumber.plus("4")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.five).setOnClickListener {
+            currentNumber = currentNumber.plus("5")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.six).setOnClickListener {
+            currentNumber = currentNumber.plus("6")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.seven).setOnClickListener {
+            currentNumber = currentNumber.plus("7")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.eight).setOnClickListener {
+            currentNumber = currentNumber.plus("8")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.nine).setOnClickListener {
+            currentNumber = currentNumber.plus("9")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.zero).setOnClickListener {
+            currentNumber = currentNumber.plus("0")
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+
+        findViewById<Button>(R.id.spot).setOnClickListener {
+            if (!currentNumber.contains(".")) {
+                currentNumber = currentNumber.plus(".")
+                findViewById<TextView>(R.id.result).text = currentNumber
+            }
+        }
+
+        findViewById<Button>(R.id.subtract).setOnClickListener {
+            if (currentNumber != "") {
+                if (storedNumber == null) {
+                    operation = "-"
+                    storedNumber = currentNumber.toFloat()
+                    currentNumber = ""
+                } else {
+                    result = performOperation(storedNumber, currentNumber, operation)
+                    storedNumber = result
+                    findViewById<TextView>(R.id.result).text = storedNumber.toString()
+                    currentNumber = ""
+                    operation = "-"
+                }
+            } else {
+                operation = "-"
+            }
+        }
+
+        findViewById<Button>(R.id.add).setOnClickListener {
+            if (currentNumber != "") {
+                if (storedNumber == null) {
+                    operation = "+"
+                    storedNumber = currentNumber.toFloat()
+                    currentNumber = ""
+                } else {
+                    result = performOperation(storedNumber, currentNumber, operation)
+                    storedNumber = result
+                    findViewById<TextView>(R.id.result).text = storedNumber.toString()
+                    currentNumber = ""
+                    operation = "+"
+                }
+            } else {
+                operation = "+"
+            }
+        }
+
+        findViewById<Button>(R.id.divide).setOnClickListener {
+            if (currentNumber != "") {
+                if (storedNumber == null) {
+                    operation = "/"
+                    storedNumber = currentNumber.toFloat()
+                    currentNumber = ""
+                } else {
+                    result = performOperation(storedNumber, currentNumber, operation)
+                    storedNumber = result
+                    findViewById<TextView>(R.id.result).text = storedNumber.toString()
+                    currentNumber = ""
+                    operation = "/"
+                }
+            } else {
+                operation = "/"
+            }
+        }
+
+        findViewById<Button>(R.id.multiply).setOnClickListener {
+            if (currentNumber != "") {
+                if (storedNumber == null) {
+                    operation = "x"
+                    storedNumber = currentNumber.toFloat()
+                    currentNumber = ""
+                } else {
+                    result = performOperation(storedNumber, currentNumber, operation)
+                    storedNumber = result
+                    findViewById<TextView>(R.id.result).text = storedNumber.toString()
+                    currentNumber = ""
+                    operation = "x"
+                }
+            } else {
+                operation = "x"
+            }
+        }
+
+        findViewById<Button>(R.id.erase).setOnClickListener {
+            if (currentNumber.length > 0) {
+                currentNumber.dropLast(1)
+            }
+        }
+
+        findViewById<Button>(R.id.ac).setOnClickListener {
+            currentNumber = ""
+            operation = null
+            result = null
+            storedNumber = null
+        }
+
+        findViewById<Button>(R.id.equals).setOnClickListener {
+            result = performOperation(storedNumber, currentNumber, operation)
+            storedNumber = null
+            currentNumber = result.toString()
+            operation = null
+            findViewById<TextView>(R.id.result).text = currentNumber
+        }
+    }
+
+    private fun performOperation(storedNumber: Float?, currentNumber: String, operation: String?): Float? {
+        if (storedNumber != null) {
+            return when (operation) {
+                "+" -> (storedNumber + currentNumber.toFloat())
+                "-" -> (storedNumber - currentNumber.toFloat())
+                "x" -> (storedNumber * currentNumber.toFloat())
+                "/" -> (storedNumber / currentNumber.toFloat())
+                else -> {
+                    d { "Error: Operacion no permitida" }
+                    null
+                }
+            }
+        }
+        d { "Error: Operacion no permitida" }
+        return null
     }
 }
