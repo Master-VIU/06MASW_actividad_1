@@ -3,4 +3,5 @@
     <dimen name="buttonSizeText">25sp</dimen>
     <dimen name="buttonSizeTextLand">15sp</dimen>
     <dimen name="textBig">40sp</dimen>
+    <dimen name="textBigger">50sp</dimen>
 </resources>
