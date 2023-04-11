@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Mi Calculadora</string>
     <string name="delete">Borrar</string>
+    <string name="result">Resultado</string>
 </resources>
