@@ -1,5 +1,6 @@
 package com.example.mycalculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log.d
@@ -153,9 +154,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.erase).setOnClickListener {
-            if (currentNumber.length > 0) {
-                currentNumber.dropLast(1)
-            }
+           // if (currentNumber.length > 0) {
+                //currentNumber.dropLast(1)
+            currentNumber = ""
+            operation = null
+            result = null
+            storedNumber = null
+            findViewById<TextView>(R.id.result).text = ""
+            //}
         }
 
         findViewById<Button>(R.id.ac).setOnClickListener {
@@ -163,6 +169,7 @@ class MainActivity : AppCompatActivity() {
             operation = null
             result = null
             storedNumber = null
+            findViewById<TextView>(R.id.result).text = ""
         }
 
         findViewById<Button>(R.id.equals).setOnClickListener {
@@ -170,10 +177,17 @@ class MainActivity : AppCompatActivity() {
             storedNumber = null
             currentNumber = result.toString()
             operation = null
-            findViewById<TextView>(R.id.result).text = currentNumber
+            //findViewById<TextView>(R.id.result).text = currentNumber
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra(MainActivity2.RESULT_CAL, currentNumber)
+            startActivity(intent)
         }
     }
 
+    override fun onDestroy() {
+        d { "OnDestroy"}
+        super.onDestroy()
+    }
     private fun performOperation(storedNumber: Float?, currentNumber: String, operation: String?): Float? {
         if (storedNumber != null) {
             return when (operation) {
