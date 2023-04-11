@@ -17,13 +17,16 @@
 
         <TextView
             android:id="@+id/numbers"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="224dp"
+            android:layout_height="51dp"
             android:textColor="@color/white"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="2dp"
             tools:text="5 + 5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
