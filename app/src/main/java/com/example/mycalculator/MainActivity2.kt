@@ -19,7 +19,7 @@ class MainActivity2 : AppCompatActivity() {
 
         val myMessage = intent.getStringExtra(RESULT_CAL)
 
-        d { "My message is: $myMessage" }
+        d { "El resultado es: $myMessage" }
 
         findViewById<TextView>(R.id.myResult).text = myMessage
     }
