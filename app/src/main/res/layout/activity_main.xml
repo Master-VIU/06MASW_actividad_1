@@ -44,12 +44,12 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/share"
+                android:id="@+id/expand"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/orange"
-                android:text="SHARE"
+                app:icon="@drawable/expand"
                 android:textColor="@color/white"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -127,7 +127,7 @@
                 android:layout_weight="1"
                 android:background="@color/black"
                 android:textColor="@color/white"
-                android:text="x"
+                android:text="*"
                 android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
