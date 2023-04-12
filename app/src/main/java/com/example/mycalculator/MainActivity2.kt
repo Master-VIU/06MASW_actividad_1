@@ -17,10 +17,27 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val myMessage = intent.getStringExtra(RESULT_CAL)
+        var myMessage = intent.getStringExtra(RESULT_CAL)
+        if (myMessage != null) {
+            if (myMessage.isEmpty()){
+                myMessage = R.string.no_result.toString()
+            }
+        } else {
+            myMessage = R.string.invalid_result.toString()
+        }
 
         d { "My message is: $myMessage" }
 
         findViewById<TextView>(R.id.myResult).text = myMessage
+        findViewById<Button>(R.id.share).setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, myMessage)
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, R.string.share_with.toString())
+            startActivity(shareIntent)
+        }
     }
 }

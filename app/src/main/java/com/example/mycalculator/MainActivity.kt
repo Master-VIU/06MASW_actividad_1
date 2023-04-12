@@ -158,14 +158,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.erase).setOnClickListener {
-           // if (currentNumber.length > 0) {
-                //currentNumber.dropLast(1)
-            currentNumber = ""
-            operation = null
-            result = null
-            storedNumber = null
-            findViewById<TextView>(R.id.result).text = ""
-            //}
+            if (currentNumber.isNotEmpty()) {
+               currentNumber = currentNumber.substring(0, currentNumber.length - 1)
+               findViewById<TextView>(R.id.result).text = currentNumber
+            }
         }
 
         findViewById<Button>(R.id.ac).setOnClickListener {
@@ -181,7 +177,11 @@ class MainActivity : AppCompatActivity() {
             storedNumber = null
             currentNumber = result.toString()
             operation = null
-            findViewById<TextView>(R.id.result).text = currentNumber
+            if (result != null) {
+                findViewById<TextView>(R.id.result).text = trimTrailingZero(currentNumber)
+            } else {
+                findViewById<TextView>(R.id.result).text = R.string.invalid_operation.toString()
+            }
         }
     }
 
@@ -189,6 +189,16 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
     private fun performOperation(storedNumber: Float?, currentNumber: String, operation: String?): Float? {
+
+        if (operation == null || operation.isEmpty()) {
+            d { "Error: no se ha definido ninguna operacion"}
+            return if (currentNumber.isNotEmpty()) {
+                currentNumber.toFloat()
+            } else {
+                0.toFloat()
+            }
+        }
+
         if (storedNumber != null) {
             return when (operation) {
                 "+" -> (storedNumber + currentNumber.toFloat())
@@ -201,8 +211,20 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        d { "Error: Operacion no permitida" }
+        d { "Error: No hay numero almacenado" }
         return null
+    }
+
+    private fun trimTrailingZero(value: String?): String? {
+        return if (!value.isNullOrEmpty()) {
+            if (value.indexOf(".") < 0) {
+                value
+            } else {
+                value.replace("0*$".toRegex(), "").replace("\\.$".toRegex(), "")
+            }
+        } else {
+            value
+        }
     }
 
 }

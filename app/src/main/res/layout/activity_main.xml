@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:background="@color/grey_1"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:textColor="@color/white"
+            android:textColor="@color/grey_3"
             android:textSize="@dimen/textBig"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
-        android:background="#170202"
-        android:backgroundTint="#150202"
+        android:background="@color/grey_1"
+        android:backgroundTint="@color/grey_1"
         android:orientation="vertical">
 
         <LinearLayout
@@ -48,9 +48,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_button"
                 app:icon="@drawable/expand"
-                android:textColor="@color/white"
+                android:gravity="center"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                android:textColor="@color/grey_3"
+                android:text=""
                 android:textSize="@dimen/buttonSizeText" />
 
             <Button
@@ -58,8 +62,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/orange"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="AC"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -68,8 +72,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="C"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -78,8 +82,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="/"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -95,8 +99,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="7"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -105,8 +109,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="8"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -115,8 +119,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="9"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -125,8 +129,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="*"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -142,8 +146,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="4"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -152,8 +156,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="5"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -162,8 +166,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="6"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -172,8 +176,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="_"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -189,8 +193,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="1"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -199,9 +203,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
                 android:text="2"
+                android:textColor="@color/grey_3"
                 android:textSize="@dimen/buttonSizeText" />
 
             <Button
@@ -209,8 +213,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="3"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -219,8 +223,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="+"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -236,8 +240,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="."
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -246,8 +250,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/black"
-                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/grey_3"
                 android:text="0"
                 android:textSize="@dimen/buttonSizeText" />
 
@@ -256,9 +260,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_button"
                 android:text="="
-                android:textColor="@color/white"
+                android:textColor="@color/grey_3"
                 android:textSize="@dimen/buttonSizeText" />
 
         </LinearLayout>
