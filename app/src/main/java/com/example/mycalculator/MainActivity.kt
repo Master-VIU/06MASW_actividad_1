@@ -3,6 +3,7 @@ package com.example.mycalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log.d
 import android.widget.Button
 import android.widget.TextView
@@ -20,8 +21,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.share).setOnClickListener {
+        findViewById<Button>(R.id.expand).setOnClickListener {
             d { "Share button clicked" }
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra(MainActivity2.RESULT_CAL, currentNumber)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.one).setOnClickListener {
@@ -177,15 +181,11 @@ class MainActivity : AppCompatActivity() {
             storedNumber = null
             currentNumber = result.toString()
             operation = null
-            //findViewById<TextView>(R.id.result).text = currentNumber
-            val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra(MainActivity2.RESULT_CAL, currentNumber)
-            startActivity(intent)
+            findViewById<TextView>(R.id.result).text = currentNumber
         }
     }
 
     override fun onDestroy() {
-        d { "OnDestroy"}
         super.onDestroy()
     }
     private fun performOperation(storedNumber: Float?, currentNumber: String, operation: String?): Float? {
@@ -204,4 +204,5 @@ class MainActivity : AppCompatActivity() {
         d { "Error: Operacion no permitida" }
         return null
     }
+
 }
