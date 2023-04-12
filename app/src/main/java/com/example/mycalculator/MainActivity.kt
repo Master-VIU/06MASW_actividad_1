@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.expand).setOnClickListener {
-            d { "Share button clicked" }
+            d { "Expand button clicked" }
             val intent = Intent(this, MainActivity2::class.java)
             intent.putExtra(MainActivity2.RESULT_CAL, currentNumber)
             startActivity(intent)
