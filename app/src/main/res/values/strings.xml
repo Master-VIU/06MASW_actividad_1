@@ -2,4 +2,6 @@
     <string name="app_name">Mycalculator</string>
     <string name="delete">Delete</string>
     <string name="result">Resultado</string>
+    <string name="share">SHARE</string>
+    <string name="view">View</string>
 </resources>
