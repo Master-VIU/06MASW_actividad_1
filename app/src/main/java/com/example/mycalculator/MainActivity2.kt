@@ -26,7 +26,7 @@ class MainActivity2 : AppCompatActivity() {
             myMessage = R.string.invalid_result.toString()
         }
 
-        d { "My message is: $myMessage" }
+        d { "El resultado es: $myMessage" }
 
         findViewById<TextView>(R.id.myResult).text = myMessage
         findViewById<Button>(R.id.share).setOnClickListener {
