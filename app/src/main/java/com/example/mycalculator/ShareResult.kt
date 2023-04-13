@@ -16,7 +16,7 @@ class ShareResult : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        var myMessage = intent.getStringExtra(RESULT_CAL)
+        var myMessage = trimTrailingZero(intent.getStringExtra(RESULT_CAL))
         if (myMessage != null) {
             if (myMessage.isEmpty()){
                 myMessage = R.string.no_result.toString()
@@ -37,6 +37,18 @@ class ShareResult : AppCompatActivity() {
 
             val shareIntent = Intent.createChooser(sendIntent, R.string.share_with.toString())
             startActivity(shareIntent)
+        }
+    }
+
+    private fun trimTrailingZero(value: String?): String? {
+        return if (!value.isNullOrEmpty()) {
+            if (value.indexOf(".") < 0) {
+                value
+            } else {
+                value.replace("0*$".toRegex(), "").replace("\\.$".toRegex(), "")
+            }
+        } else {
+            value
         }
     }
 }
