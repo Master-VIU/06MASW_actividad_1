@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi Calculadora</string>
+    <string name="delete">Borrar</string>
+    <string name="result">Resultado</string>
+    <string name="share">Compartir</string>
+    <string name="view">Ver</string>
+    <string name="no_result">No hay resultado</string>
+    <string name="share_with">Compartir con</string>
+    <string name="invalid_result">El resultado es invalido</string>
+    <string name="invalid_operation">Operacion invalida</string>
+</resources>

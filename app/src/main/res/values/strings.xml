@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Calculator</string>
+    <string name="delete">Delete</string>
+    <string name="result">Result</string>
+    <string name="share">Share</string>
+    <string name="view">View</string>
+    <string name="no_result">No result</string>
+    <string name="share_with">Share with</string>
+    <string name="invalid_result">Invalid result</string>
+    <string name="invalid_operation">Invalid Operation</string>
+</resources>
