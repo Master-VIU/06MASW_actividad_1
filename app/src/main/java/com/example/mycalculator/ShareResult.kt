@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import com.github.ajalt.timberkt.d
 
-class MainActivity2 : AppCompatActivity() {
+class ShareResult : AppCompatActivity() {
 
     companion object{
         val RESULT_CAL = "message_key"

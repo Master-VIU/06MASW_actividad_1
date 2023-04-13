@@ -3,13 +3,11 @@ package com.example.mycalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log.d
 import android.widget.Button
 import android.widget.TextView
 import com.github.ajalt.timberkt.d
 
-class MainActivity : AppCompatActivity() {
+class Calculator : AppCompatActivity() {
 
     var result: Float? = null
     var storedNumber: Float? = null
@@ -23,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.expand).setOnClickListener {
             d { "Expand button clicked" }
-            val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra(MainActivity2.RESULT_CAL, currentNumber)
+            val intent = Intent(this, ShareResult::class.java)
+            intent.putExtra(ShareResult.RESULT_CAL, currentNumber)
             startActivity(intent)
         }
 
